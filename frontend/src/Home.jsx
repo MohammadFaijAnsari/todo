@@ -9,7 +9,7 @@ function Home() {
   const [todos, setTodos] = useState([]);
 
   useEffect(()=>{
-      axios.get('http://localhost:8000/get')
+      axios.get('https://todo-7uyz.onrender.com/get')
       .then(result=>setTodos(result.data))
       .catch(err=>{console.log(err)});
   },[])
@@ -18,7 +18,7 @@ function Home() {
 
   // Delete Record for Todo
   const handleDelete =(id)=>{
-     axios.delete('http://localhost:8000/delete/'+id)
+     axios.delete('https://todo-7uyz.onrender.com/delete/'+id)
       .then(result=>{
         location.reload();
       });
