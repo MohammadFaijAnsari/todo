@@ -5,7 +5,7 @@ function Create() {
   const [add, setAdd] = useState("");
   const handleAdd = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:8000/add", { task: add })
+    axios.post("https://todo-7uyz.onrender.com/add", { task: add })
       .then(result=>{
          location.reload();
       }).catch(err=>{
