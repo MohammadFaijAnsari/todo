@@ -3,7 +3,9 @@ const app = express();
 const PORT = 8000;
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors({
+  origin:"https://todo-frontend-yb5r.onrender.com
+}));
 app.use(express.json()); // ✅ correct middleware
 
 // MongoDB connection
