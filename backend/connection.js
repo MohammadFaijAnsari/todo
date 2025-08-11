@@ -1,11 +1,16 @@
-// Connection  With Database
-const mongoose=require('mongoose');
 
-const mongo=()=>{mongoose.connect('mongodb://localhost:27017/todo-list')
-.then(()=>{
-    console.log("MongoDb Connected");
-}).catch(err=>{
-    console.log("Connection Error",er);
-})
-}
-module.exports=mongo;
+const mongoose = require('mongoose');
+
+const mongo = () => {
+    mongoose.connect(
+        'mongodb+srv://mohammadfaijansari6:FaijAnsari99720@cluster0.dx8qmzp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+    )
+        .then(() => {
+            console.log("MongoDB Connected ✅");
+        })
+        .catch(err => {
+            console.error("Connection Error ❌", err);
+        });
+};
+
+module.exports = mongo;
